@@ -8,7 +8,7 @@ $(function () {
             $letter.hide().fadeIn(300, function () {
                 setTimeout(function () {
                     $letter.addClass('reveal');
-                }, 1450);
+                }, 1550);
             });
         }
     });
