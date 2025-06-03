@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+$vanilla: #f0e4d0;
+$chocolate: #553c13;
+
 body, html {
   width: 100%;
   height: 100%;
@@ -27,26 +30,22 @@ body {
   font-family: "Rancho", cursive;
   color: #1F1F1F;
 }
-
 .envelope .front, .envelope .back {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: #FFF;
   border-radius: 5px;
-  box-shadow: 0 0 30px -5px rgba(251, 192, 185, 0.9215686275);
+  box-shadow:  0 0 30px -5px #fbc0b9eb;
 }
-
 .envelope .front {
   backface-visibility: hidden;
   cursor: pointer;
   display: table;
 }
-
 .envelope .front:focus {
   outline: none;
 }
-
 .envelope .front .stamp {
   transform: translate3d(0, 0, 1px);
   position: absolute;
@@ -59,7 +58,6 @@ body {
   background-size: 20px 20px;
   background-position: -10px -10px;
 }
-
 .envelope .front .stamp:after {
   content: "";
   display: block;
@@ -68,18 +66,15 @@ body {
   background-color: #FFF;
   border-radius: 2px;
 }
-
 .envelope .front .mail {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
-
 .envelope .front .mail p {
   font-weight: bold;
   margin: 0;
 }
-
 .envelope .back .letter p {
   font-size: 20px;
   line-height: 20px;
@@ -96,12 +91,12 @@ body {
   margin-top: 60px;
 }
 
+
 .envelope .front .mail p:first-child {
   font-size: 50px;
   line-height: 50px;
   color: #ff969f;
 }
-
 .envelope .front .mail p:last-child {
   font-size: 30px;
 }
@@ -109,31 +104,27 @@ body {
 .envelope .back {
   transform: rotateY(180deg) translate3d(0, 0, 1px);
 }
-
 .envelope .back .flip {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
 .envelope .back .flip:before {
   content: "";
   position: absolute;
   background-color: #FFF;
-  box-shadow: 0px 0px 100px rgba(245, 193, 188, 0.3215686275);
-}
+  box-shadow: 0px 0px 100px #f5c1bc52;
 
+}
 .envelope .back .top-flip:before, .envelope .back .bottom-flip:before {
   width: 388.90873px;
   height: 388.90873px;
 }
-
 .envelope .back .top-flip {
   z-index: 5;
   transform-origin: top center;
 }
-
 .envelope .back .top-flip:before {
   transform-origin: top left;
   transform: rotate(-45deg);
@@ -141,11 +132,9 @@ body {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 .envelope .back .bottom-flip {
   z-index: 4;
 }
-
 .envelope .back .bottom-flip:before {
   transform-origin: left bottom;
   transform: rotate(45deg) translate(-15px, -15px);
@@ -153,17 +142,14 @@ body {
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
 .envelope .back .left-flip:before, .envelope .back .right-flip:before {
   width: 269.27249px;
   height: 269.27249px;
   top: -5px;
 }
-
 .envelope .back .left-flip {
   z-index: 3;
 }
-
 .envelope .back .left-flip:before {
   transform-origin: top left;
   transform: rotate(45deg);
@@ -171,11 +157,9 @@ body {
   border-bottom-right-radius: 30px;
   border-top-right-radius: 5px;
 }
-
 .envelope .back .right-flip {
   z-index: 2;
 }
-
 .envelope .back .right-flip:before {
   right: 0;
   transform-origin: top right;
@@ -205,9 +189,13 @@ body {
   border-radius: 5px;
   padding: 0 30px;
   box-sizing: border-box;
-  box-shadow: 0px 1px 100px rgba(251, 192, 185, 0.9215686275);
+  box-shadow: 0px 1px 100px #fbc0b9eb;
 }
 
+//.envelope .back .letter div {
+//  position: relative;
+//  margin-top: 25px;
+//}
 .envelope .back .letter label {
   position: absolute;
   font-size: 16px;
@@ -217,21 +205,17 @@ body {
   transition: all 0.1s linear;
   color: #ADADAD;
 }
-
 .envelope .back .letter label.show {
   opacity: 1;
   top: -18px;
 }
-
 .envelope .back .letter label.focus {
   color: inherit;
 }
-
 .envelope .back .letter ::placeholder {
   color: #ADADAD;
 }
-
-.envelope .back .letter input[type=text], .envelope .back .letter textarea {
+.envelope .back .letter input[type='text'], .envelope .back .letter textarea {
   border: none;
   box-sizing: border-box;
   width: 100%;
@@ -239,21 +223,17 @@ body {
   margin: 0;
   background-color: #F6F6DF;
 }
-
 .envelope .back .letter input:focus, .envelope .back .letter textarea:focus {
   outline: none;
 }
-
 .envelope .back .letter input, .envelope .back .letter textarea {
   font-family: "Rancho", cursive;
   font-size: 20px;
 }
-
-.envelope .back .letter input[type=text] {
+.envelope .back .letter input[type='text'] {
   height: 33px;
 }
-
-.envelope .back .letter input[type=submit] {
+.envelope .back .letter input[type='submit'] {
   font-weight: bold;
   cursor: pointer;
   border: none;
@@ -263,45 +243,38 @@ body {
   margin: 0;
   transition: all 0.1s linear;
 }
-
-.envelope .back .letter input[type=submit]:hover {
+.envelope .back .letter input[type='submit']:hover {
   background-color: #DCD0AA;
 }
-
 .envelope .back .letter textarea {
   resize: none;
   height: 117.66667px;
 }
-
 .envelope.new {
   animation: new 1s forwards;
 }
-
 .envelope.open {
   animation: open 3s forwards;
 }
-
 .envelope.open .top-flip {
   animation: flip-open 1s 1s forwards;
 }
-
 .envelope.open .letter {
   animation: letter-out 1s 2s forwards;
 }
-
 .envelope.send {
   animation: send 4s forwards;
 }
-
 .envelope.send .top-flip {
   transform: rotateX(-180deg);
   z-index: -1;
   animation: flip-close 1s 1s forwards;
 }
-
 .envelope.send .letter {
   animation: letter-in 1s forwards;
 }
+
+
 
 @keyframes new {
   0% {
@@ -344,11 +317,11 @@ body {
 @keyframes letter-out {
   0% {
     transform: translate3d(0, 0, 0);
-    box-shadow: 0 0px 30px -5px rgba(251, 192, 185, 0.9215686275);
+    box-shadow: 0 0px 30px -5px #fbc0b9eb;
   }
   100% {
     transform: translate3d(0, -893.33333px, 0);
-    box-shadow: 0 0px 30px -5px rgba(251, 192, 185, 0.9215686275);
+    box-shadow: 0 0px 30px -5px #fbc0b9eb;
   }
 }
 @keyframes send {
@@ -402,6 +375,7 @@ body {
     box-shadow: inset 0 0px 30px -5px #b08c5b, 0 0 10px -5px;
   }
 }
+
 .candle {
   background: #ffffff;
   border-top-left-radius: 40%;
@@ -410,24 +384,27 @@ body {
   bottom: 70%;
   left: 50%;
   margin-left: -2.5px;
-  margin-top: -8.3333333333px;
+  margin-top: -8.333333333333334px;
   width: 10px;
   height: 50px;
-}
-.candle:after, .candle:before {
-  background: rgba(255, 0, 0, 0.4);
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 5px;
-}
-.candle:after {
-  top: 25%;
-  left: 0;
-}
-.candle:before {
-  top: 45%;
-  left: 0;
+
+
+  &:after,
+  &:before {
+    background: rgba(255, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+  }
+  &:after {
+    top: 25%;
+    left: 0;
+  }
+  &:before {
+    top: 45%;
+    left: 0;
+  }
 }
 
 .fire {
@@ -436,29 +413,50 @@ body {
   position: absolute;
   top: -12px;
   left: 50%;
-  margin-left: -3.3333333333px;
-  width: 6.6666666667px;
+  margin-left: -3.3333333333333335px;
+  width: 6.666666666666667px;
   height: 20.5px;
   animation: fire 2s infinite;
 }
 
 @keyframes fire {
   0% {
-    background: rgb(251, 243, 63);
-    background: radial-gradient(circle, rgb(251, 243, 63) 0%, rgb(252, 177, 70) 100%);
+    background: rgb(251,243,63);
+    background: radial-gradient(circle, rgba(251,243,63,1) 0%, rgba(252,177,70,1) 100%);
     transform: translateY(0) scale(1);
   }
   50% {
     transform: translateY(-20px) scale(0);
-    background: rgb(251, 243, 63);
-    background: radial-gradient(circle, rgb(251, 243, 63) 0%, rgb(252, 177, 70) 100%);
+    background: rgb(251,243,63);
+    background: radial-gradient(circle, rgba(251,243,63,1) 0%, rgba(252,177,70,1) 100%);
   }
   100% {
-    background: rgb(251, 243, 63);
-    background: radial-gradient(circle, rgb(251, 243, 63) 0%, rgb(252, 177, 70) 100%);
+    background: rgb(251,243,63);
+    background: radial-gradient(circle, rgba(251,243,63,1) 0%, rgba(252,177,70,1) 100%);
     transform: translateY(0) scale(1);
   }
 }
+
+@mixin foodColoring($color) {
+  background-color: $color;
+  box-shadow:
+          0 2px 0px lighten($color, 5%),
+          0 4px 0px darken($color, 8.2%),
+          0 6px 0px darken($color, 8.4%),
+          0 8px 0px darken($color, 8.6%),
+          0 10px 0px darken($color, 8.8%),
+          0 12px 0px darken($color, 9%),
+          0 14px 0px darken($color, 9.2%),
+          0 16px 0px darken($color, 9.4%),
+          0 18px 0px darken($color, 9.6%),
+          0 20px 0px darken($color, 9.8%),
+          0 22px 0px darken($color, 10%),
+          0 24px 0px darken($color, 10.2%),
+          0 26px 0px darken($color, 10.4%),
+          0 28px 0px darken($color, 10.6%),
+          0 30px 0px darken($color, 10.8%);
+}
+
 .cake {
   position: absolute;
   width: 250px;
@@ -477,7 +475,10 @@ body {
   left: -10px;
   background-color: #ccc;
   border-radius: 50%;
-  box-shadow: 0 2px 0 rgb(178.5, 178.5, 178.5), 0 4px 0 rgb(178.5, 178.5, 178.5), 0 5px 40px rgba(0, 0, 0, 0.5);
+  box-shadow:
+          0 2px 0 darken(#ccc, 10%),
+          0 4px 0 darken(#ccc, 10%),
+          0 5px 40px rgba(black, 0.5);
 }
 
 .cake > * {
@@ -490,41 +491,35 @@ body {
   width: 250px;
   height: 100px;
   border-radius: 50%;
-  background-color: #553c13;
-  box-shadow: 0 2px 0px rgb(105.8413461538, 74.7115384615, 23.6586538462), 0 4px 0px rgb(50.8201923077, 35.8730769231, 11.3598076923), 0 6px 0px rgb(49.9865384615, 35.2846153846, 11.1734615385), 0 8px 0px rgb(49.1528846154, 34.6961538462, 10.9871153846), 0 10px 0px rgb(48.3192307692, 34.1076923077, 10.8007692308), 0 12px 0px rgb(47.4855769231, 33.5192307692, 10.6144230769), 0 14px 0px rgb(46.6519230769, 32.9307692308, 10.4280769231), 0 16px 0px rgb(45.8182692308, 32.3423076923, 10.2417307692), 0 18px 0px rgb(44.9846153846, 31.7538461538, 10.0553846154), 0 20px 0px rgb(44.1509615385, 31.1653846154, 9.8690384615), 0 22px 0px rgb(43.3173076923, 30.5769230769, 9.6826923077), 0 24px 0px rgb(42.4836538462, 29.9884615385, 9.4963461538), 0 26px 0px rgb(41.65, 29.4, 9.31), 0 28px 0px rgb(40.8163461538, 28.8115384615, 9.1236538462), 0 30px 0px rgb(39.9826923077, 28.2230769231, 8.9373076923);
+  @include foodColoring($chocolate);
 }
 
-.layer-top {
-  top: 0px;
-}
-
-.layer-middle {
-  top: 33px;
-}
-
-.layer-bottom {
-  top: 66px;
-}
+.layer-top { top: 0px; }
+.layer-middle { top: 33px; }
+.layer-bottom { top: 66px; }
 
 .icing {
   top: 2px;
   left: 5px;
-  background-color: #f0e4d0;
+  background-color: $vanilla;
   width: 240px;
   height: 90px;
   border-radius: 50%;
-}
-.icing:before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  right: 5px;
-  bottom: 6px;
-  left: 5px;
-  background-color: rgb(243.7016129032, 234.6629032258, 219.5983870968);
-  box-shadow: 0 0 4px rgb(246.1693548387, 239.1048387097, 227.3306451613), 0 0 4px rgb(246.1693548387, 239.1048387097, 227.3306451613), 0 0 4px rgb(246.1693548387, 239.1048387097, 227.3306451613);
-  border-radius: 50%;
-  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    bottom: 6px;
+    left: 5px;
+    background-color: lighten($vanilla, 3%);
+    box-shadow:
+            0 0 4px lighten($vanilla, 5%),
+            0 0 4px lighten($vanilla, 5%),
+            0 0 4px lighten($vanilla, 5%);
+    border-radius: 50%;
+    z-index: 1;
+  }
 }
 
 .drip {
@@ -533,7 +528,7 @@ body {
   height: 60px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  background-color: #f0e4d0;
+  background-color: $vanilla;
 }
 
 .drip1 {
@@ -562,21 +557,21 @@ body {
   background-color: #7B020B;
   width: 16px;
   height: 50px;
-  border-radius: 8px/4px;
+  border-radius: 8px / 4px;
   top: -20px;
   left: 50%;
   margin-left: -8px;
   z-index: 10;
-}
-.candle:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: rgb(173.184, 2.816, 15.488);
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: lighten(#7B020B, 10%);
+  }
 }
 
 .flame {
@@ -584,12 +579,16 @@ body {
   background-color: orange;
   width: 15px;
   height: 35px;
-  border-radius: 10px 10px 10px 10px/25px 25px 10px 10px;
+  border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
   top: -34px;
   left: 50%;
   margin-left: -7.5px;
   z-index: 10;
-  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  box-shadow:
+          0 0 10px rgba(orange, 0.5),
+          0 0 20px rgba(orange, 0.5),
+          0 0 60px rgba(orange, 0.5),
+          0 0 80px rgba(orange, 0.5);
   transform-origin: 50% 90%;
   animation: flicker 1s ease-in-out alternate infinite;
 }
@@ -597,24 +596,37 @@ body {
 @keyframes flicker {
   0% {
     transform: skewX(5deg);
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
-  }
+    box-shadow:
+            0 0 10px rgba(orange, 0.2),
+            0 0 20px rgba(orange, 0.2),
+            0 0 60px rgba(orange, 0.2),
+            0 0 80px rgba(orange, 0.2) }
   25% {
     transform: skewX(-5deg);
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
-  }
+    box-shadow:
+            0 0 10px rgba(orange, 0.5),
+            0 0 20px rgba(orange, 0.5),
+            0 0 60px rgba(orange, 0.5),
+            0 0 80px rgba(orange, 0.5) }
   50% {
     transform: skewX(10deg);
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
-  }
+    box-shadow:
+            0 0 10px rgba(orange, 0.3),
+            0 0 20px rgba(orange, 0.3),
+            0 0 60px rgba(orange, 0.3),
+            0 0 80px rgba(orange, 0.3) }
   75% {
     transform: skewX(-10deg);
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
-  }
+    box-shadow:
+            0 0 10px rgba(orange, 0.4),
+            0 0 20px rgba(orange, 0.4),
+            0 0 60px rgba(orange, 0.4),
+            0 0 80px rgba(orange, 0.4) }
   100% {
     transform: skewX(5deg);
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
-  }
+    box-shadow:
+            0 0 10px rgba(orange, 0.5),
+            0 0 20px rgba(orange, 0.5),
+            0 0 60px rgba(orange, 0.5),
+            0 0 80px rgba(orange, 0.5) }
 }
-
-/*# sourceMappingURL=style.css.map */
