@@ -545,12 +545,40 @@ body {
   transform: skewY(15deg);
   height: 48px;
   width: 40px;
+  animation: growDrip1 2s ease-in-out infinite;
+  animation-delay: 0.5s
+}
+
+@keyframes growDrip1 {
+  0% {
+    height: 48px;
+  }
+  50% {
+    height: 95px;
+  }
+  100% {
+    height: 48px;
+  }
 }
 
 .drip2 {
   top: 69px;
   left: 181px;
   transform: skewY(-15deg);
+  animation: growDrip2 2s ease-in-out infinite;
+  animation-delay: 1s
+}
+
+@keyframes growDrip2 {
+  0% {
+    height: 60px;
+  }
+  50% {
+    height: 110px;
+  }
+  100% {
+    height: 60px;
+  }
 }
 
 .drip3 {
@@ -559,6 +587,20 @@ body {
   width: 80px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+  animation: growDrip3 2s ease-in-out infinite;
+  animation-delay: 0s
+}
+
+@keyframes growDrip3 {
+  0% {
+    height: 60px;
+  }
+  50% {
+    height: 85px;
+  }
+  100% {
+    height: 60px;
+  }
 }
 
 .candle {
