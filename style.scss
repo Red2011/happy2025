@@ -7,10 +7,18 @@ body, html {
   height: 100%;
 }
 
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: mistyrose;
+  z-index: -1;
+}
+
 body {
   margin: 0;
-  background-color: mistyrose;
-  position: relative;
   perspective: 800px;
   overflow: hidden;
 }
@@ -83,7 +91,7 @@ body {
 }
 
 .envelope .back .letter p:last-child {
-  margin-top: 308px;
+  margin-top: 320px;
   font-size: 30px;
 }
 
@@ -629,4 +637,90 @@ body {
             0 0 20px rgba(orange, 0.5),
             0 0 60px rgba(orange, 0.5),
             0 0 80px rgba(orange, 0.5) }
+}
+
+.letter .image {
+  position: absolute;
+  height: 150px;
+  margin-top: -70px;
+  margin-left: -125px;
+  z-index: 3;
+}
+
+.girl {
+  width: 150px;
+  top: 61%;
+  left: 87%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  animation: rotateGirl 1s linear infinite;
+}
+
+.fist {
+  width: 180px;
+  top: 57%;
+  left: 29%;
+  animation: rotateFist 1s linear infinite;
+}
+
+.car {
+  position: absolute;
+  height: 60px;
+  width: 140px;
+  top: 92%;
+  left: 87%;
+  margin-top: -70px;
+  margin-left: -125px;
+  z-index: 3;
+  animation: moveLeftRight 2s linear infinite;
+}
+
+@keyframes rotateGirl {
+  0% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes rotateFist {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0) scaleX(1);
+    transform-origin: center;
+    transform-box: fill-box;
+    transform-style: flat;
+    animation-timing-function: linear;
+  }
+
+  40% {
+    transform: translateX(-280px) scaleX(1);
+  }
+
+  50% {
+    transform: translateX(-280px) scaleX(-1);
+  }
+
+  90% {
+    transform: translateX(0) scaleX(-1);
+  }
+
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
 }

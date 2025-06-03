@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Birthday Card</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
-
+<div id="particles-js"></div>
 <div class="envelope new">
     <div class="front">
         <div class="mail">
@@ -19,8 +20,11 @@
             <p>Поздравляю тебя с этим днём, 21 это конечно ещё не возраст, но уже показывает статус)</p>
             <p>Пусть к следующему дню рождения твоя зарплата бустанётся в 999 раз (ну 5 уже неплохо хы🥲🔫)</p>
             <p>Желаю чтобы все, что ждёшь и будешь загадывать исполнилось!😜</p>
-            <p>Ну и денег чтобы всегда было столько, чтобы тебе было комфортно жить эту жизень</p>
-            <p style="text-align: center">Поздравляю тебя!!!!!</p>
+            <p style="margin-bottom: 8px;">Ну и денег чтобы всегда было столько, чтобы тебе было комфортно жить эту жизень💰</p>
+            <p style="text-align: center; margin-top: 0">Поздравляю тебя, крутышка!!!!!</p>
+            <img class="image girl" src="images/sticker.jpg" alt="Девочка">
+            <img class="image fist" src="images/fist.webp" alt="Кулак">
+            <img class="car" src="images/car.png" alt="Машина">
             <div class="cake">
                 <div class="plate"></div>
                 <div class="layer layer-bottom"></div>
@@ -45,5 +49,60 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": ["#ff0033", "#ffa500", "#ffff00", "#00ff00", "#0000ff", "#800080"]
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 1,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 5,
+                "random": true
+            },
+            "line_linked": {
+                "enable": false
+            },
+            "move": {
+                "enable": true,
+                "speed": 3,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "bounce"
+            }
+        },
+        "interactivity": {
+            "events": {
+                "onhover": {
+                    "enable": false
+                },
+                "onclick": {
+                    "enable": false
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
 </body>
 </html>
